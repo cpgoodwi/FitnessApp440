@@ -39,6 +39,11 @@ namespace FitnessApp440.Controllers
              *  on desktop, login form is a dropdown instead of new page
          */
 
+        public IActionResult CreateAccount()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
