@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Create an Account";
+}
+
+
+<div id="CA">
+    <link rel="stylesheet" href="~/css/CreateAccount.css" asp-append-version="true"/>
+    <h2>Create An Account</h2>
+    <form>
+        <div>
+            <label>Username:</label>
+            <input type="text" id="Name" />
+        </div>
+        <div>
+            <label>New Password:</label>
+            <input type="password" id="Password" />
+        </div>
+        <div>
+            <label>Confirm Password:</label>
+            <input type="password" id="confirm" />
+        </div>
+        <div>
+            <label>Height:</label>
+            <input type="number" id="height" />
+        </div>
+        <div>
+            <label>Weight:</label>
+            <input type="number" id="weight" />
+        </div>
+        <div>
+            <label>Goal:</label>
+            <input type="radio" class="goal" value="Gain Weight" name="goal"/>
+            <label>Gain Weight</label>
+            <input type="radio" class="goal" value="Maintain Weight" name="goal"/>
+            <label>Maintain Weight</label>
+            <input type="radio" class="goal" value="Lose Weight" name="goal"/>
+            <label>Lose Weight</label>
+        </div>
+        <div>
+            <button>Register</button>
+        </div>
+        <div>
+            <p>Have Already an Account? Click Here to <a>Login In</a></p>
+        </div>
+    </form>
+</div>
