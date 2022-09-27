@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+// Comment here
+
 namespace FitnessApp440.Controllers
 {
     public class HomeController : Controller
