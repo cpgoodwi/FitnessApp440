@@ -6,7 +6,11 @@ using System.Diagnostics;
 // Michael stesting for push
 // Morris test for push
 // another michael test
+<<<<<<< HEAD
 // another Michael branch part 3
+=======
+// Morris second test
+>>>>>>> 9a0b28798188b00778e5f5ac7b807f7a793a92cc
 namespace FitnessApp440.Controllers
 {
     public class HomeController : Controller
