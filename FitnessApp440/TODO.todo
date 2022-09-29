@@ -13,3 +13,5 @@
 	Set up a file in structure to store the icons we and logos apart from food images
 
 3. OPTIONAL Load food items to front-end in batches instead of all at once
+
+4. Allow different access and views for home page with and without login
