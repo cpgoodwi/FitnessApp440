@@ -1,0 +1,15 @@
+﻿TODO: List of things that can or should be done
+
+1. Store image locations in database or the images themselves
+	OPTION 1) If we store images, we need to automatically crop and compress them to a manageable size (100x100 px)
+	OPTION 2) if we store the locations, we need to keep images updated in the project file structure through git.
+
+	Either way, I think we should crop and resize the image as we store it
+		use html form upload to send image to server
+		use c# to crop image into square and resize it
+		save it to the server
+
+2. Store icons and logos
+	Set up a file in structure to store the icons we and logos apart from food images
+
+3. OPTIONAL Load food items to front-end in batches instead of all at once
