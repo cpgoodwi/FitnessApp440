@@ -1,7 +1,7 @@
-﻿using System;
+﻿// using System;
 using System.Data;
-using System.Windows.Forms;
-using System.Data.SqlClient;
+// using System.Windows.Forms;
+// using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
 namespace FitnessApp440.Helper
