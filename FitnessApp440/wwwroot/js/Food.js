@@ -4,8 +4,9 @@
  */
 
 class Food {
-    constructor(foodID, name, calories, protein, carbs, fat, image, description) {
+    constructor(foodID, byUser, name, calories, protein, carbs, fat, image, description) {
         this.foodID = foodID
+        this.byUser = byUser // TODO: implement link to view specific user posts
         this.name = name
         this.calories = calories
         this.protein = protein
@@ -20,6 +21,7 @@ class Food {
             <div class="food-item" id="food${this.foodID}">
                 <img src="${this.image}" alt="${this.name}" height="100" />
                 <h6 class="food-name">${this.name}</h6>
+                <a class="food-by">${byUser}</a>
                 <ul class="food-stats">
                     <li>${this.calories} Calories</li>
                     <li>${this.protein}g Protein</li>
