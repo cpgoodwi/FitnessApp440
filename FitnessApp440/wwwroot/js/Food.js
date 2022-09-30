@@ -1,21 +1,41 @@
-﻿class Food {
-    constructor(image) {
+﻿/* FOOD CLASS
+ *  for loading food items as componenets
+ *  takes data from data as attributes and loads it into one HTML component to render
+ */
+
+class Food {
+    constructor(foodID, byUser, name, calories, protein, carbs, fat, image, description) {
+        this.foodID = foodID
+        this.byUser = byUser // TODO: implement link to view specific user posts
+        this.name = name
+        this.calories = calories
+        this.protein = protein
+        this.carbs = carbs
+        this.fat = fat
         this.image = image
+        this.description = description
     }
 
     renderHTML() {
         return (`
-            <div class="food-item">
-                <img src="${this.image}" alt="Dot Hog" height="100" />
-                <h6 class="food-title">Hot Dog</h6>
+            <div class="food-item" id="food${this.foodID}">
+                <img src="${this.image}" alt="${this.name}" height="100" />
+                <h6 class="food-name">${this.name}</h6>
+                <a class="food-by">${byUser}</a>
                 <ul class="food-stats">
-                    <li>Calories</li>
-                    <li>Protein</li>
-                    <li>Carbs</li>
-                    <li>Fat</li>
+                    <li>${this.calories} Calories</li>
+                    <li>${this.protein}g Protein</li>
+                    <li>${this.carbs}g Carbs</li>
+                    <li>${this.fat}g Fat</li>
                 </ul>
-                <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh ipsum consequat nisl vel pretium lectus quam. Sed felis eget velit aliquet sagittis id consectetur purus ut. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Molestie a iaculis at erat. At risus viverra adipiscing at in tellus integer feugiat. Feugiat pretium nibh ipsum consequat. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Aliquam ultrices sagittis orci a scelerisque purus semper. Sed turpis tincidunt id aliquet risus feugiat.</p>
+                <details class="food-desc">${this.description}</details>
+                <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">like</div>
             </div>
         `)
     }
+}
+
+function likeFood(foodID) {
+    // this function will use AJAX to like or unlike the food on the database
+    console.log(foodID)
 }
