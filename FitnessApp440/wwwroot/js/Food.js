@@ -30,8 +30,14 @@ class Food {
                 </ul>
                 <details class="food-desc">${this.description}</details>
                 <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">like</div>
+                <!-- div id="food${this.foodID}-like2" onclick="Food.like(${this.foodID})")">like2</div -->
             </div>
         `)
+    }
+
+    // added static method for like. Either works fine but it might be better 
+    static like(foodID) {
+        console.log(foodID)
     }
 }
 
