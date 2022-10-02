@@ -23,10 +23,10 @@ class Food {
                 <h6 class="food-name">${this.name}</h6>
                 <a class="food-by">${this.byUser}</a>
                 <ul class="food-stats">
-                    <li>${this.calories} Calories</li>
-                    <li>${this.protein}g Protein</li>
-                    <li>${this.carbs}g Carbs</li>
-                    <li>${this.fat}g Fat</li>
+                    <li>Calories: ${this.calories}cal</li>
+                    <li>Protein: ${this.protein}g</li>
+                    <li>Carbs: ${this.carbs}g</li>
+                    <li>Fat: ${this.fat}g</li>
                 </ul>
                 <details class="food-desc">${this.description}</details>
                 <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">like</div>

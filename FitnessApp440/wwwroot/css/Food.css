@@ -1,2 +1,12 @@
 ﻿/* Write CSS rules for food components */
 
+@media screen and (min-width: 1024px) {
+    .food-item {
+        position:relative;
+        border: 3px solid gray;
+        height: 150px;
+        border-radius: 5px;
+    }
+
+
+}
