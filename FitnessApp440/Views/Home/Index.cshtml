@@ -2,22 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-@*<script src="~/js/Food.js" asp-append-version="true"></script>*@
+<script src="~/js/Food.js" asp-append-version="true" defer></script>
+<script src="~/js/index.js" asp-append-version="true" defer></script>
+<link rel="stylesheet" href="~/css/Food.css" asp-append-version="true" />
 
 <div class="body-container">
     <div id="food-feed">
         @*Here would be the feed loaded from the database, but for now it is example items*@
-        <div class="food-item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Hot_dog_on_a_plate_-_Evan_Swigart.jpg" alt="Dot Hog" height="100" />
-            <h6 class="food-title">Hot Dog</h6>
-            <ul class="food-stats">
-                <li>Calories</li>
-                <li>Protein</li>
-                <li>Carbs</li>
-                <li>Fat</li>
-            </ul>
-            <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh ipsum consequat nisl vel pretium lectus quam. Sed felis eget velit aliquet sagittis id consectetur purus ut. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Molestie a iaculis at erat. At risus viverra adipiscing at in tellus integer feugiat. Feugiat pretium nibh ipsum consequat. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Aliquam ultrices sagittis orci a scelerisque purus semper. Sed turpis tincidunt id aliquet risus feugiat.</p>
-        </div>
-        <div id="jshere"></div>
+    </div>
+    <div id="dashboard">
+        @*Here is where we would load a dashboard with javascript*@
     </div>
 </div>

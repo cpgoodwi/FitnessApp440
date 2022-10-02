@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-// Comment here
+// Comment here test
+// Michael stesting for push
+// Morris test for push
+// another michael test
 
 namespace FitnessApp440.Controllers
 {
@@ -26,6 +29,16 @@ namespace FitnessApp440.Controllers
         }
 
         public IActionResult Profile()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult CreateAccount()
         {
             return View();
         }

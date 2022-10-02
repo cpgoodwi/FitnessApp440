@@ -4,5 +4,5 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    console.log(new Food("Banana.jpg").renderHTML())
+    console.log("the site has loaded!")
 })

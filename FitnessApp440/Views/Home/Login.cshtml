@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+@*Sign in box styling*@
+
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card" style="background-color: darkgrey; border-radius: 15px;">
+                    <div class="card-body p-6 text-center">
+
+                        <h1 class="mb-5">SIGN IN</h1>
+
+                        @*Username field*@
+                        <div class="form-outline mb-4">
+                            <input type="text" id="username" class="form-control form-control-lg" />
+                            <label class="form-label" for="username">Username</label>
+                        </div>
+
+                        @*Password Box*@
+                        <div class="form-outline mb-4">
+                            <input type="password" id="password" class="form-control form-control-lg" />
+                            <label class="form-label" for="password">Password</label>
+                        </div>
+
+                        @*Remember Password box*@
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input" type="checkbox" value="" id="remember" />
+                            <label class="form-check-label" for="remember"> Remember password </label>
+                        </div>
+                        @*Login Button*@
+                        <button class="btn btn-primary btn-lg btn-block border border-white mb-4" type="submit" style="background-color: black;">Login</button>
+
+                        @*Sign Up*@
+                        <div>
+                            <p class="mb-4">
+                                Don't have an account? <a asp-area="" asp-controller="Home" asp-action="CreateAccount" class="text-white-50 fw-bold">Sign Up</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,21 +1,59 @@
-﻿class Food {
-    constructor(image) {
+﻿/* FOOD CLASS
+ *  for loading food items as componenets
+ *  takes data from data as attributes and loads it into one HTML component to render
+ */
+
+class Food {
+    constructor(foodID, byUser, name, calories, protein, carbs, fat, image, description) {
+        this.foodID = foodID
+        this.byUser = byUser // TODO: implement link to view specific user posts
+        this.name = name
+        this.calories = calories
+        this.protein = protein
+        this.carbs = carbs
+        this.fat = fat
         this.image = image
+        this.description = description
     }
 
     renderHTML() {
         return (`
-            <div class="food-item">
-                <img src="${this.image}" alt="Dot Hog" height="100" />
-                <h6 class="food-title">Hot Dog</h6>
+            <div class="food-item" id="food${this.foodID}">
+                <img src="${this.image}" alt="${this.name}" height="100" />
+<<<<<<< HEAD
+                <h6 class="food-name">${this.name}</h6>
+                <a class="food-by">${this.byUser}</a>
                 <ul class="food-stats">
-                    <li>Calories</li>
-                    <li>Protein</li>
-                    <li>Carbs</li>
-                    <li>Fat</li>
+                    <li>Calories: ${this.calories}cal</li>
+                    <li>Protein: ${this.protein}g</li>
+                    <li>Carbs: ${this.carbs}g</li>
+                    <li>Fat: ${this.fat}g</li>
                 </ul>
-                <p class="food-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh ipsum consequat nisl vel pretium lectus quam. Sed felis eget velit aliquet sagittis id consectetur purus ut. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Molestie a iaculis at erat. At risus viverra adipiscing at in tellus integer feugiat. Feugiat pretium nibh ipsum consequat. Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Aliquam ultrices sagittis orci a scelerisque purus semper. Sed turpis tincidunt id aliquet risus feugiat.</p>
+                <details class="food-desc">${this.description}</details>
+                <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">like</div>
+                <!-- div id="food${this.foodID}-like2" onclick="Food.like(${this.foodID})")">like2</div -->
+=======
+                <h5 class="food-name">${this.name}</h5>
+                <ul class="food-stats">
+                    <li><span>Calories:</span> ${this.calories}cal</li>
+                    <li><span>Protein:</span> ${this.protein}g</li>
+                    <li><span>Carbs:</span> ${this.carbs}g</li>
+                    <li><span>Fat:</span> ${this.fat}g</li>
+                </ul>
+                <details class="food-desc">${this.description}</details>
+                <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">&#9825;</div>
+>>>>>>> MorrisLostCommit
             </div>
         `)
     }
+
+    // added static method for like. Either works fine but it might be better 
+    static like(foodID) {
+        console.log(foodID)
+    }
+}
+
+function likeFood(foodID) {
+    // this function will use AJAX to like or unlike the food on the database
+    console.log(foodID)
 }

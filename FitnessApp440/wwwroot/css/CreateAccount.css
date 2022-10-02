@@ -1,0 +1,55 @@
+﻿#CA {
+    margin: auto 290px;
+}
+
+h2 {
+    margin: auto 50px;
+}
+
+#Name {
+    margin-left: 78px;
+}
+
+#Password {
+    margin-left: 46px;
+}
+
+#confirm {
+    margin-left: 20px;
+}
+
+#height {
+    margin-left: 104px;
+}
+
+#weight {
+    margin-left: 101px;
+}
+
+button {
+    margin: auto 80px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: maroon;
+    color: gold;
+}
+
+@*p {
+    text-align: center;
+}
+
+*@
+div {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: orange;
+}
