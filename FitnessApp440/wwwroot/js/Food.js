@@ -20,6 +20,7 @@ class Food {
         return (`
             <div class="food-item" id="food${this.foodID}">
                 <img src="${this.image}" alt="${this.name}" height="100" />
+<<<<<<< HEAD
                 <h6 class="food-name">${this.name}</h6>
                 <a class="food-by">${this.byUser}</a>
                 <ul class="food-stats">
@@ -31,6 +32,17 @@ class Food {
                 <details class="food-desc">${this.description}</details>
                 <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">like</div>
                 <!-- div id="food${this.foodID}-like2" onclick="Food.like(${this.foodID})")">like2</div -->
+=======
+                <h5 class="food-name">${this.name}</h5>
+                <ul class="food-stats">
+                    <li><span>Calories:</span> ${this.calories}cal</li>
+                    <li><span>Protein:</span> ${this.protein}g</li>
+                    <li><span>Carbs:</span> ${this.carbs}g</li>
+                    <li><span>Fat:</span> ${this.fat}g</li>
+                </ul>
+                <details class="food-desc">${this.description}</details>
+                <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">&#9825;</div>
+>>>>>>> MorrisLostCommit
             </div>
         `)
     }

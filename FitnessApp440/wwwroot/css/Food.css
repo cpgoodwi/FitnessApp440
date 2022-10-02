@@ -1,5 +1,6 @@
 ﻿/* Write CSS rules for food components */
 
+<<<<<<< HEAD
 @media screen and (min-width: 1024px) {
     .food-item {
         position:relative;
@@ -10,3 +11,173 @@
 
 
 }
+=======
+/*Computer view*/
+@media only screen and (min-width: 1024px) {
+    .food-item {
+        position: relative;
+        border: 3px solid #A9A7A2;
+        border-radius: 5px;
+        height: 120px;
+    }
+
+    .food-name {
+        position: absolute;
+        top: 0px;
+        left: 150px
+    }
+
+    .food-stats {
+        position: absolute;
+        left: 150px;
+        top: 25px;
+    }
+
+    .food-stats li {
+        display: inline;
+    }
+
+    .food-desc {
+        position: absolute;
+        left: 150px;
+        top: 50px;
+    }
+
+    .food-item div {
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        font-size: 20px;
+    }
+    .food-item span {
+        color: #CD1D1D;
+        font-weight:500;
+    }
+}
+
+/*view between computer and mobile*/
+@media only screen and (max-width: 1023px) and (min-width: 511px) {
+    .food-item {
+        position: relative;
+        border: 3px solid #A9A7A2;
+        border-radius: 5px;
+        height: 120px;
+    }
+
+    .food-stats {
+        position: absolute;
+        left: 150px;
+        top: 25px;
+    }
+    
+    .food-name {
+        position: absolute;
+        top: 0px;
+        left: 150px
+    }
+
+    .food-stats li {
+        display: inline;
+    }
+
+    .food-desc {
+        position: absolute;
+        left: 150px;
+        top: 50px;
+    }
+
+    .food-item div {
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        font-size: 20px;
+    }
+    .food-item span {
+        color: #CD1D1D;
+        font-weight: 500;
+    }
+}
+
+/*Second view between co,pute and mobile*/
+@media only screen and (max-width: 510px) and (min-width: 371px) {
+    .food-item {
+        position: relative;
+        border: 3px solid #A9A7A2;
+        border-radius: 5px;
+        height: 120px;
+    }
+
+    .food-name {
+        position: absolute;
+        top: 0px;
+        left: 150px
+    }
+
+    .food-stats {
+        position: absolute;
+        left: 150px;
+        top: 25px;
+    }
+
+     .food-stats li {
+        display: inline;
+    }
+
+    .food-desc {
+        position: absolute;
+        left: 150px;
+        top: 70px;
+    }
+
+    .food-item div {
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        font-size: 20px;
+    }
+    .food-item span {
+        color: #CD1D1D;
+        font-weight: 500;
+    }
+}
+
+/*mobile view*/
+@media only screen and (max-width: 370px){
+    .food-item {
+        position: relative;
+        border: 3px solid #A9A7A2;
+        border-radius: 5px;
+        height: 160px;
+    }
+
+    .food-name {
+        position: absolute;
+        top: 0px;
+        left: 150px
+    }
+
+    .food-stats {
+        position: absolute;
+        left: 150px;
+        top: 25px;
+    }
+
+    .food-desc {
+        position: absolute;
+        left: 150px;
+        top: 110px;
+    }
+
+    .food-item div {
+        position: absolute;
+        top: -5px;
+        right: 0px;
+        font-size: 20px;
+    }
+    .food-item span {
+        color: #CD1D1D;
+        font-weight: 500;
+    }
+}
+
+>>>>>>> MorrisLostCommit

@@ -17,7 +17,7 @@ namespace FitnessApp440.Helper
 
         public static void EstablishConnection()
         {
-             String ConnectionResult;
+            String ConnectionResult;
 
             try
             {
@@ -31,7 +31,7 @@ namespace FitnessApp440.Helper
                 ConnectionResult = " Database Connectioi Successful";
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ConnectionResult = "Connection Failed";
             }
