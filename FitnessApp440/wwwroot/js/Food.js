@@ -3,6 +3,8 @@
  *  takes data from data as attributes and loads it into one HTML component to render
  */
 
+//Morris testing
+
 class Food {
     constructor(foodID, name, calories, protein, carbs, fat, image, description) {
         this.foodID = foodID
