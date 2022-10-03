@@ -4,8 +4,9 @@
  */
 
 class Food {
-    constructor(foodID, name, calories, protein, carbs, fat, image, description) {
+    constructor(foodID, byUser, name, calories, protein, carbs, fat, image, description) {
         this.foodID = foodID
+        this.byUser = byUser // TODO: implement link to view specific user posts
         this.name = name
         this.calories = calories
         this.protein = protein
@@ -20,6 +21,7 @@ class Food {
             <div class="food-item" id="food${this.foodID}">
                 <img src="${this.image}" alt="${this.name}" height="100" />
                 <h5 class="food-name">${this.name}</h5>
+                <a class="food-by">${this.byUser}</a>
                 <ul class="food-stats">
                     <li><span>Calories:</span> ${this.calories}cal</li>
                     <li><span>Protein:</span> ${this.protein}g</li>
@@ -30,6 +32,11 @@ class Food {
                 <div id="food${this.foodID}-like" onclick="likeFood(${this.foodID})")">&#9825;</div>
             </div>
         `)
+    }
+
+    // added static method for like. Either works fine but it might be better 
+    static like(foodID) {
+        console.log(foodID)
     }
 }
 
