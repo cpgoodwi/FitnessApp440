@@ -28,10 +28,10 @@ namespace FitnessApp440.Controllers
             return View();
         }
 
-        public IActionResult Profile()
+        /*public IActionResult Profile()
         {
             return View();
-        }
+        }*/
 
         public IActionResult Login()
         {
