@@ -9,6 +9,7 @@ function cookie2json(cookie) {
         pair = pair.split(/\s*=\s*/);
         output[pair[0]] = pair.splice(1).join('=');
     });
+    return output;
 }
 
 /* JS hashing function borrowed from stack overflow, which cited another source
