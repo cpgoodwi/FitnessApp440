@@ -101,6 +101,9 @@ namespace FitnessApp440.Controllers
             return View();
         }
 
+       
+
+
         /* TODO Login Corner:
              * If user is logged in, allow navigation to profile and food journal
              * Else, prompt user to log in or create account
