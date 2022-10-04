@@ -13,7 +13,7 @@
     <PackageReference Include="Csk.System.Windows.Forms" Version="1.0.0" />
     <PackageReference Include="System.Windows.Forms.Pictograms" Version="1.3.22" />
     <PackageReference Include="MySql.Data" Version="8.0.30" />
-    <PackageReference Include="System.Windows.Forms.Ribbon35" Version="3.5.8" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +30,6 @@
     <None Remove="System.Windows.Forms.Pictograms" />
     <None Remove="MySql.Data" />
     <None Remove="Helper\" />
-    <None Remove="System.Windows.Forms.Ribbon35" />
+    <None Remove="Microsoft.Data.SqlClient" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,9 @@
 ﻿using FitnessApp440.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using FitnessApp440.Helper;
+using System.Data.SqlClient;
+
 
 // Comment here test
 // Michael stesting for push
@@ -18,10 +21,65 @@ namespace FitnessApp440.Controllers
             _logger = logger;
         }
 
+        //public HomeController()
+        //{
+        //}
+
+        // This method starts running all the method when the app starts 
         public IActionResult Index()
         {
+            /*TestSqlConnection();
+            InsertUser();
+            InsertFood();
+            FoodListResult();
+            UserListResult();*/
             return View();
         }
+
+        // This method test the connection to the Sql Database and returns a string with the result.
+        public  string TestSqlConnection()
+        {
+            
+            string ConnectionCheck;
+            ConnectionCheck = Helper.SqlConnection.EstablishConnection();
+            return ConnectionCheck;
+        }
+
+        // This method gets the list of Food data and retuns the list.
+        public List<FoodViewModel> FoodListResult( )
+        {
+            List<FoodViewModel> foodViewModelList = new List<FoodViewModel>();
+            foodViewModelList = Helper.SqlConnection.RunFoodQuery();
+            return foodViewModelList;
+        }
+
+        // This method gets the list of User data and retuns the list.
+        public List<UserViewModel> UserListResult()
+        {
+            List<UserViewModel> UserViewModelList = new List<UserViewModel>();
+            UserViewModelList = Helper.SqlConnection.RunUserQuery();
+            return UserViewModelList;
+        }
+
+        // This method gets the info inputted to the user to be added to the Database
+        public string InsertFood()
+        {            
+            string insetFoodResult;
+            FoodViewModel foodViewModelUserEntry = new FoodViewModel();
+            insetFoodResult = Helper.SqlConnection.SproucFoodInsert(foodViewModelUserEntry);
+            return insetFoodResult;
+        }
+
+        // This method gets user data inputted to be added to the Database
+        public string InsertUser()
+        {
+            string insertUserResult;
+            UserViewModel userViewModelUserEntry = new UserViewModel();
+            insertUserResult = Helper.SqlConnection.SproucUserInsert(userViewModelUserEntry);
+            return insertUserResult;
+        }
+
+
 
         public IActionResult Privacy()
         {

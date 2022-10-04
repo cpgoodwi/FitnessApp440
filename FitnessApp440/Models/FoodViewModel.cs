@@ -9,23 +9,33 @@ namespace FitnessApp440.Models
 
     public class FoodViewModel
     {
+        public FoodViewModel()
+        {
+        }
+
+        public FoodViewModel(DataRow row)
+        {
+            Row = row;
+        }
 
         public int FoodID { get; set; }
 
         public String? Name { get; set; }
 
-        public int Calories { get; set; }
+        public String? byUser { get; set; }
 
-        public int Protein { get; set; }
+        public Int16 Calories { get; set; }
 
-        public int Carbs { get; set; }
+        public Int16 Protein { get; set; }
 
-        public int Fat { get; set; }
+        public Int16 Carbs { get; set; }
+
+        public Int16 Fat { get; set; }
 
         public String? Image { get; set; }
 
         public String? DescriptionText { get; set; }
-
+        public DataRow Row { get; set; }
     }
 }
 

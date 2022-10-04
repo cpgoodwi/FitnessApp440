@@ -16,9 +16,9 @@ namespace FitnessApp440.Models
 
         public String? Password { get; set; }
 
-        public Int16 Height { get; set; }
+        public byte Height { get; set; }
 
-        public Int16 Weight { get; set; }
+        public Int32 Weight { get; set; }
 
         public Int16 GoalWeight { get; set; }
 
