@@ -18,19 +18,20 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <ul id="profile-or-login" class="navbar-nav flex-grow-1 flex-row-reverse">
+                        <li id="toLogout" class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Logout</a>
                         </li>
-                        @*<li class="nav-item" id="profile-or-login">
+                        <li id="toProfile" class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile">Profile</a>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                        </li>*@
+                        </li>
+                        <li id="toLogin" class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Log In</a>
+                        </li>
+                        <li id="postFood" class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Food" asp-action="CreateFood">&#127820;</a>
+                        </li>
                     </ul>
-                    <div id="profile-or-login">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile">Profile</a>
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Login</a>
-                    </div>
                 </div>
                 @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>*@
                 @*<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Profile">Profile</a>*@
@@ -38,7 +39,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div id="appBody" class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

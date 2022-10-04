@@ -4,5 +4,31 @@
 // Write your JavaScript code.
 
 $(document).ready(function () {
-    console.log("the site has loaded!")
+    // check if user is logged in, if not prompt them to log in.
+    if (loggedIn() || $("main").children().hasClass("authForm")) { // children().hasClass() is a little janky, might want to find another way
+        $("#toLogin").hide() // hide() might be too slow for UX, but for now it works
+    }
+    else {
+        $("main").hide()
+        $("#appBody").html(`
+            <h1>You are not logged in.</h1>
+            <p>Please log in to use our service</p>
+            <p>maybe put something about us here or something...</p>
+        `)
+        $("#toProfile").hide()
+        $("#toLogout").hide()
+        $("#postFood").hide()
+    }
+    if ($("main").children().hasClass("authForm")) {
+        $("#toProfile").hide()
+        $("#toLogout").hide()
+        $("#postFood").hide()
+    }
 })
+
+function loggedIn() {
+    // check status of user login in database
+
+
+    return false
+}

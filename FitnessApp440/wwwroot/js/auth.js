@@ -13,6 +13,7 @@ $("#login-form").submit(function (e) {
             data: { username: values[0].value, password: values[1].value },
             success: function (result) {
                 alert("you did it")
+                document.cookie = `username=${values[0].value}; password=${values[1].value}`
             },
             error: function (req, status, error) {
                 e.preventDefault()
@@ -27,7 +28,7 @@ $("#login-form").submit(function (e) {
 })
 
 function isValidLogin(values) {
-    return (values[0].value.length != 0 && values[1].value.length != 0)
+    return (values[0].value.length > 0 && values[1].value.length > 0)
 }
 
 $("#create-account").submit(function (e) {
@@ -42,6 +43,7 @@ $("#create-account").submit(function (e) {
             data: { username: values[0].value, password: values[1].value },
             success: function (result) {
                 alert("you did it")
+                document.cookie = `username=${values[0].value}; password=${values[1].value}`
             },
             error: function (req, status, error) {
                 e.preventDefault()
@@ -56,5 +58,5 @@ $("#create-account").submit(function (e) {
 })
 
 function isValidCreation(values) {
-    return (values[0].value.length != 0 && values[1].value.length != 0 && values[1].value != values[2].value)
+    return (values[0].value.length > 0 && values[1].value.length > 0 && values[1].value != values[2].value)
 }

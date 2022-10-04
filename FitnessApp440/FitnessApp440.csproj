@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\img\" />
+    <Folder Include="Views\Food\" />
     <Folder Include="Validations\" />
     <Folder Include="Helper\" />
   </ItemGroup>
