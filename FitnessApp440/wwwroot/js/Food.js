@@ -43,9 +43,9 @@ function likeFood(foodID) {
     //const heart = document.getElementById('food${this.foodID}');
     //heart.innerHTML = "&#10084";
 
-    $(`#food${this.foodID}-like`).click(function () {
-        $(`#food${this.foodID}-like`).html("&hearts;");
-    });
+    //$(`food${this.foodID}-like`).click(function () {
+    //    $(`food${this.foodID}-like`).html("&#10084");
+    //});
 
-    //$(`food${this.foodID}-like`).css("background-color", "red");
+    $(`#food${this.foodID}-like`).css("background-color", "red");
 }

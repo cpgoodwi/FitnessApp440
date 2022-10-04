@@ -30,5 +30,5 @@ function loggedIn() {
     // check status of user login in database
 
 
-    return false
+    return true
 }

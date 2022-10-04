@@ -87,7 +87,7 @@
 }
 
 /*Second view between computer and mobile*/
-@media only screen and (max-width: 510px) and (min-width: 376px) {
+@media only screen and (max-width: 510px) and (min-width: 401px) {
     .food-item {
         position: relative;
         border: 3px solid #A9A7A2;
@@ -130,7 +130,7 @@
 }
 
 /*mobile view*/
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 400px){
     .food-item {
         position: relative;
         border: 3px solid #A9A7A2;
