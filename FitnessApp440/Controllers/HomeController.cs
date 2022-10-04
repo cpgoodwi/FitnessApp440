@@ -18,6 +18,11 @@ namespace FitnessApp440.Controllers
             _logger = logger;
         }
 
+        [ActivatorUtilitiesConstructor]
+        public HomeController()
+        {
+        }
+
         //public HomeController()
         //{
         //}
@@ -59,16 +64,16 @@ namespace FitnessApp440.Controllers
         }
 
         // This method gets the info inputted to the user to be added to the Database
-        public string InsertFood()
+        public string InsertFood(FoodViewModel foodViewModelUserEntry)
         {
             string insetFoodResult;
-            FoodViewModel foodViewModelUserEntry = new FoodViewModel();
+           // FoodViewModel foodViewModelUserEntry = new FoodViewModel();
             insetFoodResult = Helper.SqlConnection.SproucFoodInsert(foodViewModelUserEntry);
             return insetFoodResult;
         }
 
         // This method gets user data inputted to be added to the Database
-        public string InsertUser()
+        public string InsertUser(UserViewModel UserViewModel)
         {
             string insertUserResult;
             UserViewModel userViewModelUserEntry = new UserViewModel();

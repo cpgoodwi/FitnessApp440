@@ -151,7 +151,7 @@ namespace FitnessApp440.Helper
                 cmd.Parameters.AddWithValue("@protein", foodViewModelEntry.Protein);
                 cmd.Parameters.AddWithValue("@carbs", foodViewModelEntry.Carbs);
                 cmd.Parameters.AddWithValue("@fat", foodViewModelEntry.Fat);
-                cmd.Parameters.AddWithValue("@image", foodViewModelEntry.Image);
+                cmd.Parameters.AddWithValue("@image", foodViewModelEntry.Image = "testing");
                 cmd.Parameters.AddWithValue("@description", foodViewModelEntry.DescriptionText);
                 queryResult = cmd.ExecuteNonQuery();
 
