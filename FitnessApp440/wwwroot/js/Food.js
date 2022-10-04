@@ -1,9 +1,5 @@
-﻿/* FOOD CLASS
- *  for loading food items as componenets
- *  takes data from data as attributes and loads it into one HTML component to render
- */
-
-//Morris testing
+﻿// Food Class for loading food items as componenets
+// takes data from data as attributes and loads it into one HTML component to render
 
 class Food {
     constructor(foodID, byUser, name, calories, protein, carbs, fat, image, description) {
@@ -43,5 +39,13 @@ class Food {
 
 function likeFood(foodID) {
     // this function will use AJAX to like or unlike the food on the database
-    console.log(foodID)
+    //console.log(foodID);
+    //const heart = document.getElementById('food${this.foodID}');
+    //heart.innerHTML = "&#10084";
+
+    $(`#food${this.foodID}-like`).click(function () {
+        $(`#food${this.foodID}-like`).html("&hearts;");
+    });
+
+    //$(`food${this.foodID}-like`).css("background-color", "red");
 }

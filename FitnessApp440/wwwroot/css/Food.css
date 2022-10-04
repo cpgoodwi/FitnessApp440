@@ -34,8 +34,8 @@
     .food-item div {
         position: absolute;
         top: -5px;
-        right: 0px;
-        font-size: 20px;
+        right: 5px;
+        font-size: 60px;
     }
     .food-item span {
         color: #CD1D1D;
@@ -77,8 +77,8 @@
     .food-item div {
         position: absolute;
         top: -5px;
-        right: 0px;
-        font-size: 20px;
+        right: 5px;
+        font-size: 30px;
     }
     .food-item span {
         color: #CD1D1D;
@@ -86,8 +86,8 @@
     }
 }
 
-/*Second view between co,pute and mobile*/
-@media only screen and (max-width: 510px) and (min-width: 371px) {
+/*Second view between computer and mobile*/
+@media only screen and (max-width: 510px) and (min-width: 376px) {
     .food-item {
         position: relative;
         border: 3px solid #A9A7A2;
@@ -120,8 +120,8 @@
     .food-item div {
         position: absolute;
         top: -5px;
-        right: 0px;
-        font-size: 20px;
+        right: 5px;
+        font-size: 30px;
     }
     .food-item span {
         color: #CD1D1D;
@@ -130,38 +130,47 @@
 }
 
 /*mobile view*/
-@media only screen and (max-width: 370px){
+@media only screen and (max-width: 375px){
     .food-item {
         position: relative;
         border: 3px solid #A9A7A2;
         border-radius: 5px;
-        height: 190px;
+        height: 390px;
     }
 
-    .food-name {
+    .food-item img {
+        height: 200px;
+        margin: auto;
+        display: block;
+    }
+
+    .food-item h5 {
         position: absolute;
-        top: 0px;
-        left: 150px
+        top: 210px;
+        left: 20px;
     }
 
     .food-stats {
         position: absolute;
-        left: 150px;
-        top: 25px;
+        top: 230px;
+        text-align: left;
     }
 
     .food-desc {
         position: absolute;
-        left: 150px;
-        top: 180px;
+        top: 320px;
+        left: 10px;
+        text-align: center;
     }
 
     .food-item div {
         position: absolute;
-        top: -5px;
+        top: 202px;
         right: 0px;
-        font-size: 20px;
+        font-size: 28px;
+/*        text-align: right;*/
     }
+
     .food-item span {
         color: #CD1D1D;
         font-weight: 500;

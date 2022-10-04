@@ -37,16 +37,16 @@ namespace FitnessApp440.Controllers
         }
 
         // This method test the connection to the Sql Database and returns a string with the result.
-        public  string TestSqlConnection()
+        public string TestSqlConnection()
         {
-            
+
             string ConnectionCheck;
             ConnectionCheck = Helper.SqlConnection.EstablishConnection();
             return ConnectionCheck;
         }
 
         // This method gets the list of Food data and retuns the list.
-        public List<FoodViewModel> FoodListResult( )
+        public List<FoodViewModel> FoodListResult()
         {
             List<FoodViewModel> foodViewModelList = new List<FoodViewModel>();
             foodViewModelList = Helper.SqlConnection.RunFoodQuery();
@@ -63,7 +63,7 @@ namespace FitnessApp440.Controllers
 
         // This method gets the info inputted to the user to be added to the Database
         public string InsertFood()
-        {            
+        {
             string insetFoodResult;
             FoodViewModel foodViewModelUserEntry = new FoodViewModel();
             insetFoodResult = Helper.SqlConnection.SproucFoodInsert(foodViewModelUserEntry);

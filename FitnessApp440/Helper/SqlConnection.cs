@@ -33,23 +33,23 @@ namespace FitnessApp440.Helper
             builder.SslMode = MySqlSslMode.None;
             connection = new MySqlConnection(builder.ToString());
             connection.Open();
-                if (connection.State == ConnectionState.Open)
-                {
-                    ConnectionResult = " Database Connection Successful";
-                }
-                else
-                {
-                    ConnectionResult = "Connection Failed";
-                }
-                        
+            if (connection.State == ConnectionState.Open)
+            {
+                ConnectionResult = " Database Connection Successful";
+            }
+            else
+            {
+                ConnectionResult = "Connection Failed";
+            }
+
             return ConnectionResult;
         }
 
         // This method search the database and return a list of data in the Food table.
         // The list will be sent to the controller so it can sent to the client to display the data.
-        public static List<FoodViewModel>  RunFoodQuery ()
+        public static List<FoodViewModel> RunFoodQuery()
         {
-        
+
             FoodViewModel foodViewModel = new FoodViewModel();
             List<FoodViewModel> foodEntriesList = new List<FoodViewModel>();
 
@@ -63,23 +63,23 @@ namespace FitnessApp440.Helper
                 da.Fill(dt);
 
 
-                foreach (DataRow row in dt.Rows )
+                foreach (DataRow row in dt.Rows)
                 {
-     
-                foodViewModel.FoodID = (int)row[0];
-                foodViewModel.byUser = (string)row[1];
-                foodViewModel.Name = (string)row[2];
-                foodViewModel.Calories = (short)row[3];
-                foodViewModel.Protein = (short)row[4];
-                foodViewModel.Carbs = (short)row[5];
-                foodViewModel.Fat = (short)row[6];
-                foodViewModel.Image = (string)row[7];
-                foodViewModel.DescriptionText = (string)row[8];
 
-                foodEntriesList.Add(foodViewModel);
-                                        
+                    foodViewModel.FoodID = (int)row[0];
+                    foodViewModel.byUser = (string)row[1];
+                    foodViewModel.Name = (string)row[2];
+                    foodViewModel.Calories = (short)row[3];
+                    foodViewModel.Protein = (short)row[4];
+                    foodViewModel.Carbs = (short)row[5];
+                    foodViewModel.Fat = (short)row[6];
+                    foodViewModel.Image = (string)row[7];
+                    foodViewModel.DescriptionText = (string)row[8];
+
+                    foodEntriesList.Add(foodViewModel);
+
                 }
-                  
+
                 connection.Close();
             }
 
@@ -89,7 +89,7 @@ namespace FitnessApp440.Helper
             }
 
             return foodEntriesList;
-                  
+
         }
 
         // This method search the database and return a list of data in the User table.
@@ -135,12 +135,12 @@ namespace FitnessApp440.Helper
         // This string should be displayed to the client.
         public static string SproucFoodInsert(FoodViewModel foodViewModelEntry)
         {
-            string entryresult ="";
+            string entryresult = "";
             int queryResult;
 
             if (connection.State == ConnectionState.Open)
             {
-                
+
                 string sqlQuery = "Sprouc_AddFood";
                 using var cmd = new MySqlCommand(sqlQuery, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
