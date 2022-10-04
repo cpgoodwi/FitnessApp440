@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FitnessApp440.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
@@ -31,9 +32,31 @@ namespace FitnessApp440.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetUserJSON() // TODO: rename to get user as JS object
+        public JsonResult GetUserJSON(string username)
         {
-            return new JsonResult(Ok(new FitnessApp440.Models.UserViewModel()));
+            // get description from databse
+            string desc = "I am charley";
+
+            // declaring food from "database" for demo
+            FoodViewModel banana = new FoodViewModel(1, "Banana", "charley", 100, 100, 100, 100, "Banana.jpg", "This is a banana");
+            FoodViewModel bagel = new FoodViewModel(2, "Cheese Bagel", "charley", 100, 100, 100, 100, "Cheese_Bagel.JPG", "This is a Cheese Bagel");
+            FoodViewModel hotDog = new FoodViewModel(3, "Costco Hot Dog", "charley", 100, 100, 100, 100, "Costco_Hot_Dog.jpeg", "This is a Costco Hotdog");
+
+            // get a list of food posts from database
+            FoodViewModel[] posts =
+            {
+                banana,
+                bagel,
+                hotDog
+            };
+            // get a list of food likes from database
+            FoodViewModel[] likes =
+            {
+                banana,
+                bagel
+            };
+
+            return new JsonResult(Ok(new UserRenderModel(username, desc, posts, likes)));
         }
     }
 }

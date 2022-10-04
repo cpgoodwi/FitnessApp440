@@ -7,18 +7,33 @@
  */
 
 $(document).ready(function () {
+    var userInfo;
+
     console.log("profile loaded")
     $.ajax({
         type: "GET",
         url: "/User/GetUserJSON",
         dataType: "json",
+        data: { username: "charley" },
         success: function (result) {
-            console.log("from url")
             console.log(result.value)
-            $("#profile-name").text(result.value.userName)
+            loadProfile(result.value)
+            /*$("#profile-name").text(result.value.userName)*/
         },
         error: function (req, status, error) {
             console.log(status)
         }
     })
 })
+
+function loadProfile(userInfo) {
+    $("#profile-name").text(userInfo.userName)
+
+    for (const post of userInfo.foodPosts) {
+        $("#user-posts").append(new Food(post.foodID, post.byUser, post.name, post.calories, post.protein, post.carbs, post.fat, post.image, post.descriptionText).renderHTML())
+    }
+
+    for (const like of userInfo.likedFood) {
+        $("#user-likes").append(new Food(like.foodID, like.byUser, like.name, like.calories, like.protein, like.carbs, like.fat, like.image, like.descriptionText).renderHTML())
+    }
+}

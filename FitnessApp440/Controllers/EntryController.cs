@@ -14,10 +14,10 @@ namespace FitnessApp440.Controllers
 
         HomeController HomeController = new HomeController();
         
-        public IActionResult CreateFood()
+        /*public IActionResult CreateFood()
         {
             return View();
-        }
+        }*/
 
         // This method gets the input from user, stores it into the FoodViewModel and send it to the AddFoodToDatabase function. 
         [HttpPost]

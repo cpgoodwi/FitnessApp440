@@ -14,14 +14,7 @@ namespace FitnessApp440.Models
 
     public class FoodViewModel
     {
-        public FoodViewModel()
-        {
-        }
-
-        public FoodViewModel(DataRow row)
-        {
-            Row = row;
-        }
+        public FoodViewModel() { }
 
         public int FoodID { get; set; }
 
@@ -41,6 +34,30 @@ namespace FitnessApp440.Models
 
         public String? DescriptionText { get; set; }
         public DataRow Row { get; set; }
+
+        public FoodViewModel(int foodID, string? name, string? byUser, short calories, short protein, short carbs, short fat, string? image, string? descriptionText)
+        {
+            FoodID = foodID;
+            Name = name;
+            this.byUser = byUser;
+            Calories = calories;
+            Protein = protein;
+            Carbs = carbs;
+            Fat = fat;
+            Image = image;
+            DescriptionText = descriptionText;
+            /*Row = row;*/
+        }
+
+        public FoodViewModel(DataRow row)
+        {
+            Row = row;
+        }
+    }
+
+    public class FoodRenderModel
+    {
+
     }
 }
 

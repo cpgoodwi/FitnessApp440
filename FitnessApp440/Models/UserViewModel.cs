@@ -40,6 +40,22 @@ namespace FitnessApp440.Models
 
 
     }
+
+    public class UserRenderModel
+    {
+        public string? UserName { get; set; }
+        public string? Description { get; set; }
+        public FoodViewModel[] FoodPosts { get; set; }
+        public FoodViewModel[] LikedFood { get; set; }
+
+        public UserRenderModel(string? userName, string? description, FoodViewModel[] foodPosts, FoodViewModel[] likedFood)
+        {
+            UserName = userName;
+            Description = description;
+            FoodPosts = foodPosts;
+            LikedFood = likedFood;
+        }
+    }
 }
 
 

@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Food\" />
     <Folder Include="Validations\" />
     <Folder Include="Helper\" />
     <Folder Include="DataModel\" />

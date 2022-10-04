@@ -17,7 +17,7 @@ class Food {
     renderHTML() {
         return (`
             <div class="food-item" id="food${this.foodID}">
-                <img src="img/${this.image}" alt="${this.name}" height="100" />
+                <img src="/img/${this.image}" alt="${this.name}" height="100" />
                 <h5 class="food-name">${this.name} by <a class="food-by">${this.byUser}</a></h5>
                 <ul class="food-stats">
                     <li><span>Calories:</span> ${this.calories}cal</li>
