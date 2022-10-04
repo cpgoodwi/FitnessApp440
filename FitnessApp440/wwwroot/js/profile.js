@@ -10,7 +10,7 @@ $(document).ready(function () {
     console.log("profile loaded")
     $.ajax({
         type: "GET",
-        url: "/User/GetUserName",
+        url: "/User/GetUserJSON",
         dataType: "json",
         success: function (result) {
             console.log("from url")

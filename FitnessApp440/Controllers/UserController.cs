@@ -31,7 +31,7 @@ namespace FitnessApp440.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetUserName() // TODO: rename to get user as JS object
+        public JsonResult GetUserJSON() // TODO: rename to get user as JS object
         {
             return new JsonResult(Ok(new FitnessApp440.Models.UserViewModel()));
         }
