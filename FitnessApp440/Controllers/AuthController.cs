@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure.Identity;
+using Microsoft.AspNetCore.Mvc;
+
+/* TODO: IMPORTANTx2: implement sessions for the user
+ * TODO: implement log out functionality
+ */
 
 namespace FitnessApp440.Controllers
 {

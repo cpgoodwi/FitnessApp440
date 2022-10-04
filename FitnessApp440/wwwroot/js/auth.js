@@ -1,5 +1,7 @@
 ﻿/* Handling User Authentication AJAX */
 
+// TODO: implement log out functionality (also mentioned in AuthController.cs)
+
 $("#login-form").submit(function (e) {
     const form = $(this)
     values = form.serializeArray(); values.pop() // pop removes __RequestVerificationToken (hope its not important)

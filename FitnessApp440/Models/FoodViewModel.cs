@@ -7,6 +7,10 @@ namespace FitnessApp440.Models
 
     // This is an object for Food. This object should be used for any logic through the solution.
 
+    /* TODO: implement constructor to get from database
+     *  
+     */
+
     public class FoodViewModel
     {
         public FoodViewModel()

@@ -6,6 +6,8 @@ namespace FitnessApp440.Models
 {
 
     // This is an object for the User. This object should be used for any logic through the solution.
+    // TODO: this object needs to be reworked; it should only store the information necessary to view
+    // should include an array/list of liked foods and foods posted for viewing on the profile
 
     public class UserViewModel
     {
@@ -20,19 +22,21 @@ namespace FitnessApp440.Models
             Description = "This is me";
         }
 
-        public int ID { get; set; }
+        // TODO: Constructor that creates gets a user given a username and returns the name, liked posts, and posts by user
+
+        public int ID { get; set; } // TODO; remove this because we are just using username as the ID
 
         public String? UserName { get; set; }
 
-        public String? Password { get; set; }
+        public String? Password { get; set; } // TODO: probably want to remove this
 
-        public byte Height { get; set; }
+        public byte Height { get; set; } // probably want to remove this
 
-        public Int32 Weight { get; set; }
+        public Int32 Weight { get; set; } // probably want to remove this
 
-        public Int16 GoalWeight { get; set; }
+        public Int16 GoalWeight { get; set; } // probably want to remove this
 
-        public String? Description { get; set; }
+        public String? Description { get; set; } // can keep this
 
 
     }

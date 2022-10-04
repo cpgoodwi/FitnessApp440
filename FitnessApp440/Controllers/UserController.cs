@@ -12,7 +12,7 @@ namespace FitnessApp440.Controllers
         }
 
         [HttpGet]
-        public JsonResult CurrentUser()
+        public JsonResult CurrentUser() // TODO: remove me
         {
             var names = new string[3]
             {
@@ -25,13 +25,13 @@ namespace FitnessApp440.Controllers
         }
 
         [HttpPost]
-        public JsonResult PostName(string name)
+        public JsonResult PostName(string name) // TODO: remove me
         {
             return new JsonResult(Ok());
         }
 
         [HttpGet]
-        public JsonResult GetUserName()
+        public JsonResult GetUserName() // TODO: rename to get user as JS object
         {
             return new JsonResult(Ok(new FitnessApp440.Models.UserViewModel()));
         }

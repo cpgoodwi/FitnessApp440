@@ -5,10 +5,7 @@ using FitnessApp440.Helper;
 using System.Data.SqlClient;
 
 
-// Comment here test
-// Michael stesting for push
-// Morris test for push
-// another michael test
+/* TODO: spread sql methods to other controllers */
 
 namespace FitnessApp440.Controllers
 {
