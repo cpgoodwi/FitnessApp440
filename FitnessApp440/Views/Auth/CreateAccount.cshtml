@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Create an Account";
+}
+
+@*Account creation form with bootstrap styling*@
+
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card" style="background-color: lightgray; border-radius: 15px;">
+                <form  id="create-account" class="card-body p-5" asp-controller="Home" asp-action="Index">
+                    <h2 class="text-center mb-5">CREATE AN ACCOUNT</h2>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="Username" name="username" class="form-control form-control-lg" />
+                        <label class="form-label" for="Username">Username</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="password" id="Password" name="password" class="form-control form-control-lg" />
+                        <label class="form-label" for="Password">Password</label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="password" id="Confirm" name="confirm" class="form-control form-control-lg" />
+                        <label class="form-label" for="Confirm">Confirm Password</label>
+                    </div>
+                    @*<div class="form-outline mb-4">
+                        <input type="number" id="Weight" name="weight" class="form-control form-control-lg" />
+                        <label class="form-label" for="Weight">Current Weight</label>
+                    </div>*@ @*removing weight from form to simplify current product; will be added in future version*@
+                    <div class="d-flex justify-content-center">
+                        <button type="submit"
+                                class="btn btn-success btn-block btn-lg" style="background-color:maroon;">
+                            Register
+                        </button>
+                    </div>
+                    <p class="text-center text-dark mt-5 mb-0">Already have an account? <a asp-area="" asp-controller="Auth" asp-action="Login" class="text-muted fw-bold">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    

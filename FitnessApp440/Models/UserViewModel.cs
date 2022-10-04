@@ -9,7 +9,17 @@ namespace FitnessApp440.Models
 
     public class UserViewModel
     {
-      
+        public UserViewModel()
+        {
+            ID = 1;
+            UserName = "username";
+            Password = "password";
+            Height = 100;
+            Weight = 100;
+            GoalWeight = 100;
+            Description = "This is me";
+        }
+
         public int ID { get; set; }
 
         public String? UserName { get; set; }
