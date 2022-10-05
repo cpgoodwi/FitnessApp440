@@ -47,5 +47,5 @@ function likeFood(foodID) {
     //    $(`food${this.foodID}-like`).html("&#10084");
     //});
 
-    $(`#food${this.foodID}-like`).css("background-color", "red");
+    $(`#food${foodID}-like`).css("color", "red");
 }
