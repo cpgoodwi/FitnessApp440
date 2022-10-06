@@ -5,27 +5,50 @@
 
 $(document).ready(function () {
     // check if user is logged in, if not prompt them to log in.
-    if (loggedIn() || $("main").children().hasClass("authForm")) { // children().hasClass() is a little janky, might want to find another way
+
+    $.ajax({
+        type: "GET",
+        url: "/api/Session",
+        dataType: "json",
+        // data: { userID: getCookie("uid") },
+        success: function (result) {
+            console.log(result.value)
+            if (result.value[0] != "")
+                $("#toLogin").hide()
+            else
+                hideApp()
+        },
+        error: function (req, status, error) {
+            alert("uh oh")
+            $("html").hide()
+        }
+    })
+})
+
+function showApp() {
+    
+}
+
+function hideApp() {
+    if ($("main").children().hasClass("authForm")) { // children().hasClass() is a little janky, might want to find another way
         $("#toLogin").hide() // hide() might be too slow for UX, but for now it works
-    }
-    else {
+    } else {
         $("main").hide()
         $("#appBody").html(`
             <h1>You are not logged in.</h1>
             <p>Please log in to use our service</p>
-            <p>maybe put something about us here or something...</p>
         `)
         $("#toProfile").hide()
         $("#toLogout").hide()
         $("#postFood").hide()
-    }
-    if ($("main").children().hasClass("authForm")) {
+    } if ($("main").children().hasClass("authForm")) {
         $("#toProfile").hide()
         $("#toLogout").hide()
         $("#postFood").hide()
     }
-})
+}
 
+<<<<<<< HEAD
 function loggedIn() {
     // check status of user login in database
     $.ajax({
@@ -43,3 +66,8 @@ function loggedIn() {
 
     return true
 }
+=======
+$("#toLogout").click(function () {
+    // TODO: Figure out a way to logout. Right now its just close and reopen
+})
+>>>>>>> f994b5fe38ebf0e441dc242d464ac7bbf67fe9f4

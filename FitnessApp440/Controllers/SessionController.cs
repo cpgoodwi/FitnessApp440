@@ -8,13 +8,13 @@ namespace FitnessApp440.Controllers
     public class SessionController : ControllerBase
     {
         [HttpGet]
-        public IEnumerable<string> GetSessionInfo()
+        public JsonResult GetSessionInfo(string? userID = "")
         {
             List<string> sessionInfo = new List<string>();
 
             if (string.IsNullOrWhiteSpace(HttpContext.Session.GetString(SessionVariables.SessionKeyUsername)))
             {
-                HttpContext.Session.SetString(SessionVariables.SessionKeyUsername, "Current User");
+                HttpContext.Session.SetString(SessionVariables.SessionKeyUsername, userID);
                 HttpContext.Session.SetString(SessionVariables.SessionKeySessionId, Guid.NewGuid().ToString());
             }
 
@@ -24,14 +24,7 @@ namespace FitnessApp440.Controllers
             sessionInfo.Add(username);
             sessionInfo.Add(sessionId);
 
-            return sessionInfo;
-        }
-
-        [HttpGet]
-        public string? GetSessionKeyUsername()
-        {
-            var value = HttpContext.Session.GetString(SessionVariables.SessionKeyUsername);
-            return value;
+            return new JsonResult(Ok(sessionInfo));
         }
     }
 }

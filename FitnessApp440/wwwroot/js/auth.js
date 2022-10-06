@@ -8,21 +8,9 @@ $("#login-form").submit(function (e) {
     console.log(values)
 
     if (isValidLogin(values)) {
-        $.ajax({
-            type: "POST",
-            url: "/Auth/LoginSubmit",
-            dataType: "json",
-            data: { username: values[0].value, password: values[1].value },
-            success: function (result) {
-                alert("you did it")
-                document.cookie = `username=${values[0].value}; password=${values[1].value}`
-            },
-            error: function (req, status, error) {
-                e.preventDefault()
-                alert("something went wrong")
-                console.log(status)
-            }
-        })
+        console.log(values[0].value)
+        // document.cookie = `uid=${values[0].value};path=/`
+        updateSession(values[0].value) // TODO: change this to working code
     } else {
         e.preventDefault()
         alert("invalid login")
@@ -38,21 +26,7 @@ $("#create-account").submit(function (e) {
     values = form.serializeArray(); values.pop() // pop removes __RequestVerificationToken (hope its not important)
 
     if (isValidCreation(values)) {
-        $.ajax({
-            type: "POST",
-            url: "/Auth/CreateSubmit",
-            dataType: "json",
-            data: { username: values[0].value, password: values[1].value },
-            success: function (result) {
-                alert("you did it")
-                document.cookie = `username=${values[0].value}; password=${values[1].value}`
-            },
-            error: function (req, status, error) {
-                e.preventDefault()
-                alert("something went wrong")
-                console.log(status)
-            }
-        })
+        updateSession(values[0].value)
     } else {
         e.preventDefault()
         alert("invalid login")

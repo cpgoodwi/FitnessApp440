@@ -205,6 +205,44 @@ namespace FitnessApp440.Helper
 
             return entryresult;
         }
+
+/*========================================================================
+        CHARLEY'S SQL METHODS
+ =======================================================================*/
+
+        public static string GetDescriptionByUserName(string username)
+        {
+            /*  TODO: run sql query that gets a description value from database
+             *  query might look like:
+             *  select DESCRIPTION from USER where USERNAME = <username>;
+             */
+
+            return "";
+        }
+
+        public static FoodViewModel[] GetFoodPostsByUserName(string username)
+        {
+            /*  TODO: run sql query that gets a description value from database
+             *  query might look like:
+             *  select * from FOOD where BYUSER = <username>;
+             */
+
+            FoodViewModel[] foodPosts = new FoodViewModel[1]; // this is just example code
+
+            return foodPosts;
+        }
+
+        public static FoodViewModel[] GetLikedFoodByUserName(string username)
+        {
+            /*  TODO: run sql query that gets a description value from database
+             *  query might look like:
+             *  select * from FOOD where FOODID in {select * from LIKES where USERNAME = <username>}; -- not entirely sure if this is correct, I'm just trying to remember the syntax of a subquery
+             */
+
+            FoodViewModel[] likedFood = new FoodViewModel[1]; // this is just example code
+
+            return likedFood;
+        }
     }
 }
 
