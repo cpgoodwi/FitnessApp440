@@ -1,4 +1,5 @@
 ﻿using Azure.Identity;
+using FitnessApp440.Models;
 using Microsoft.AspNetCore.Mvc;
 
 /* TODO: IMPORTANTx2: implement sessions for the user
@@ -20,17 +21,23 @@ namespace FitnessApp440.Controllers
         }
 
         [HttpPost]
-        public JsonResult CreateSubmit(string username, string password)
+        public IActionResult LoginSubmit(string username, string password)
         {
-            // create new user in database with given params
-            return new JsonResult(Ok());
+            // TODO: find username in database and check if password matches: return boolean
+
+            return View("../Home/Index");
         }
 
-        [HttpPost]
-        public JsonResult LoginSubmit(string username, string password)
+        public IActionResult CreateSubmit(string username, string password, string confirm)
         {
-            // verify username and password are in database
-            return new JsonResult(Ok());
+            // TODO: add username and password to database. default description should be "I am {username}" maybe add option to edit later
+
+            return View("../Home/Index");
+        }
+
+        public IActionResult Logout()
+        {
+            return View("../Home/Index");
         }
     }
 }

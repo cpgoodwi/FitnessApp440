@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Data;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using FitnessApp440.Helper
 
 namespace FitnessApp440.Models
 {
@@ -9,7 +11,7 @@ namespace FitnessApp440.Models
     // TODO: this object needs to be reworked; it should only store the information necessary to view
     // should include an array/list of liked foods and foods posted for viewing on the profile
 
-    public class UserViewModel
+    public class UserViewModel // TODO: remove this comepletly and rename UserRenderModel to this
     {
         public UserViewModel()
         {
@@ -41,7 +43,7 @@ namespace FitnessApp440.Models
 
     }
 
-    public class UserRenderModel
+    public class UserRenderModel // TODO: Refactor UserViewModel to this where appropriate
     {
         public string? UserName { get; set; }
         public string? Description { get; set; }
@@ -54,6 +56,14 @@ namespace FitnessApp440.Models
             Description = description;
             FoodPosts = foodPosts;
             LikedFood = likedFood;
+        }
+
+        public UserRenderModel(string? userName)
+        {
+            UserName = userName;
+            Description = SqlConnection.GetDescriptionByUserName(userName);
+            FoodPosts = SqlConnection.GetFoodPostsByUserName(userName);
+            LikedFood = SqlConnection.GetLikedFoodByUserName(userName);
         }
     }
 }
