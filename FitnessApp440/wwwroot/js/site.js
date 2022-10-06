@@ -36,8 +36,8 @@ function loggedIn() {
             alert("you did it")
             console.log(result)
         },
-        error: function (req, status, error) {
-            alert("no luck")
+        //error: function (req, status, error) {
+        //    alert("no luck")
         }
     })
 

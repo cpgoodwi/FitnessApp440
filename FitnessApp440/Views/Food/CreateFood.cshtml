@@ -8,7 +8,7 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="card" style="background-color: lightgray; border-radius: 15px;">
-                @using (Html.BeginForm("GetFoodEntry", "Entry", FormMethod.Post)) {
+                @using (Html.BeginForm("GetFoodEntry", "Food", FormMethod.Post, new { enctype = "multipart/form-data" })) {
                     <form class="card-body p-5">
 
 
@@ -17,44 +17,43 @@
 
                         @*Food Name field*@
                         <div class="form-outline mb-2">
-                            <input type="text" id="foodname" class="form-control form-control-sm" />
-                            <label class="form-label" for="foodname">Food Name</label>
+                            @Html.Label("Food Name")
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control form-control-sm" })
                         </div>
 
-                        @*Description Box*@
                         <div class="form-outline mb-2">
-                            <textarea id="description" class="form-control form-control-lg"></textarea>
-                            <label class="form-label" for="description">Food Description</label>
+                            @Html.Label("Food Description")
+                            @Html.TextAreaFor(x => x.DescriptionText, new { @class = "form-control form-control-lg" })
                         </div>
 
-                        @*Calories*@
                         <div class="form-outline mb-2">
-                            <input type="number" id="calories" class="form-control form-control-sm" />
-                            <label class="form-label" for="Calories">Calories</label>
+                            @Html.Label("Calories")
+                            @Html.TextBoxFor(x => x.Calories, new { @class = "form-control form-control-sm" })
                         </div>
 
                         @*Protein*@
                         <div class="form-outline mb-2">
-                            <input type="number" id="protein" class="form-control form-control-sm" />
-                            <label class="form-label" for="protein">Protein (g)</label>
+                            @Html.Label("Protein (g)")
+                            @Html.TextBoxFor(x => x.Protein, new { @class = "form-control form-control-sm" })
                         </div>
 
                         @*Carbohydrates*@
                         <div class="form-outline mb-2">
-                            <input type="number" id="carbohydrates" class="form-control form-control-sm" />
-                            <label class="form-label" for="carbohydrates">Carbohydrates (g)</label>
+                            @Html.Label("Carbohydrates (g)")
+                            @Html.TextBoxFor(x => x.Carbs, new { type = "number", @class = "form-control form-control-sm" })
                         </div>
 
                         @*Fat*@
-                        <div class="form-outline mb-2">
-                            <input type="number" id="fat" class="form-control form-control-sm" />
-                            <label class="form-label" for="fat">Fat (g)</label>
-                        </div>
+                    <div class="form-outline mb-2">
+                        @Html.Label("Fat (g)")
+                        @Html.TextBoxFor(x => x.Fat, new { @class = "form-control form-control-sm" })
+                    </div>
 
-                        <div class="form-outline mb-2">
-                            <input type="file" id="file" class="form-control form-control-md" />
-                            <label class="form-label" for="customFile">File Upload</label>
-                        </div>
+                    <div class="form-outline mb-2">
+                        @Html.Label("Upload Image")
+                        @Html.TextBoxFor(x => x.Image, null, new { type = "file", @class = "input-file" })
+
+                    </div>
 
                         <button class="btn btn-primary btn-lg btn-block border border-white mb-2" type="submit" style="background-color: black;">Add Food</button>
 

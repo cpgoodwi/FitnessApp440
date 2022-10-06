@@ -30,7 +30,10 @@ namespace FitnessApp440.Models
 
         public Int16 Fat { get; set; }
 
-        public String? Image { get; set; }
+        public IFormFile Image { get; set; }
+
+        public String? ImageLcation { get; set; }
+
 
         public String? DescriptionText { get; set; }
         // public DataRow Row { get; set; }
@@ -46,7 +49,7 @@ namespace FitnessApp440.Models
             Protein = protein;
             Carbs = carbs;
             Fat = fat;
-            Image = image;
+            ImageLcation = image;
             DescriptionText = descriptionText;
             /*Row = row;*/
         }

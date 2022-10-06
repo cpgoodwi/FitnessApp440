@@ -15,7 +15,7 @@ namespace FitnessApp440.Validations
             dBFoodModel.Protein = foodViewModel.Protein;
             dBFoodModel.Carbs = foodViewModel.Carbs;
             dBFoodModel.Fat = foodViewModel.Fat;
-            dBFoodModel.Image = foodViewModel.Image;
+            dBFoodModel.Image = foodViewModel.ImageLcation;
             dBFoodModel.DescriptionText = foodViewModel.DescriptionText;
 
             return dBFoodModel;

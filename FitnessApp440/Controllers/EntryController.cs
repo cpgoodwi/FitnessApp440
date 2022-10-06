@@ -1,80 +1,80 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using FitnessApp440.Models;
-using FitnessApp440.Helper;
-using FitnessApp440.Controllers;
-using System.Web;
+﻿//using Microsoft.AspNetCore.Mvc;
+//using FitnessApp440.Models;
+//using FitnessApp440.Helper;
+//using FitnessApp440.Controllers;
+//using System.Web;
 
 
 
-namespace FitnessApp440.Controllers
-{
-    
-    public class EntryController : Controller
-    {
+//namespace FitnessApp440.Controllers
+//{
 
-        HomeController HomeController = new HomeController();
-        
-        /*public IActionResult CreateFood()
-        {
-            return View();
-        }*/
+//    public class EntryController : Controller
+//    {
 
-        // This method gets the input from user, stores it into the FoodViewModel and send it to the AddFoodToDatabase function. 
-        [HttpPost]
-        public ActionResult GetFoodEntry(FoodViewModel FoodViewModel)
-        {
+//        HomeController HomeController = new HomeController();
 
-            string Name = FoodViewModel.Name;
-            string byUser = FoodViewModel.ByUser; // replace with code that gets session variable
-            int calories = FoodViewModel.Calories;
-            int protein = FoodViewModel.Protein;
-            int carbs = FoodViewModel.Carbs;
-            int fat = FoodViewModel.Fat;
-            string image = FoodViewModel.Image;
-            string descriptionText = FoodViewModel.DescriptionText;
+//        /*public IActionResult CreateFood()
+//        {
+//            return View();
+//        }*/
 
-            AddFoodToDatabase(FoodViewModel);
+//        // This method gets the input from user, stores it into the FoodViewModel and send it to the AddFoodToDatabase function. 
+//        [HttpPost]
+//        public ActionResult GetFoodEntry(FoodViewModel FoodViewModel)
+//        {
 
-            return View();
-        }
+//            string Name = FoodViewModel.Name;
+//            string byUser = FoodViewModel.ByUser; // replace with code that gets session variable
+//            int calories = FoodViewModel.Calories;
+//            int protein = FoodViewModel.Protein;
+//            int carbs = FoodViewModel.Carbs;
+//            int fat = FoodViewModel.Fat;
+//            string image = FoodViewModel.Image;
+//            string descriptionText = FoodViewModel.DescriptionText;
 
-        [HttpPost]
-        public ActionResult GetUserEntry(UserViewModel UserViewModel)
-        {
+//            AddFoodToDatabase(FoodViewModel);
 
-            string userName = UserViewModel.UserName;
-            string password = UserViewModel.Password;
-            int height = UserViewModel.Height;
-            int weight = UserViewModel.Weight;
-            int goalWeight = UserViewModel.GoalWeight;
+//            return View();
+//        }
 
-            AddUserToDatabase(UserViewModel);
-           
-            return View();
-        }
+//        [HttpPost]
+//        public ActionResult GetUserEntry(UserViewModel UserViewModel)
+//        {
 
-        // This method gets the data from GetFoodEntry, sends it to the SqlQuey for food entry and returns a  result string
-        public string AddFoodToDatabase(FoodViewModel FoodViewModel)
-        {
+//            string userName = UserViewModel.UserName;
+//            string password = UserViewModel.Password;
+//            int height = UserViewModel.Height;
+//            int weight = UserViewModel.Weight;
+//            int goalWeight = UserViewModel.GoalWeight;
 
-            string foodEntryResult = "";
+//            AddUserToDatabase(UserViewModel);
 
-            HomeController.TestSqlConnection();
-            foodEntryResult = HomeController.InsertFood(FoodViewModel);
+//            return View();
+//        }
 
-            return foodEntryResult;
-        }
+//        // This method gets the data from GetFoodEntry, sends it to the SqlQuey for food entry and returns a  result string
+//        public string AddFoodToDatabase(FoodViewModel FoodViewModel)
+//        {
 
-        public string AddUserToDatabase(UserViewModel UserViewModel)
-        {
+//            string foodEntryResult = "";
 
-            string UserEntryResult = "";
+//            HomeController.TestSqlConnection();
+//            foodEntryResult = HomeController.InsertFood(FoodViewModel);
 
-            HomeController.TestSqlConnection();
-            UserEntryResult = HomeController.InsertUser(UserViewModel);
+//            return foodEntryResult;
+//        }
 
-            return UserEntryResult;
-        }
-    }
-        
-}
+//        public string AddUserToDatabase(UserViewModel UserViewModel)
+//        {
+
+//            string UserEntryResult = "";
+
+//            HomeController.TestSqlConnection();
+//            UserEntryResult = HomeController.InsertUser(UserViewModel);
+
+//            return UserEntryResult;
+//        }
+//    }
+
+//}

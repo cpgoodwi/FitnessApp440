@@ -73,7 +73,7 @@ namespace FitnessApp440.Helper
                     foodViewModel.Protein = (short)row[4];
                     foodViewModel.Carbs = (short)row[5];
                     foodViewModel.Fat = (short)row[6];
-                    foodViewModel.Image = (string)row[7];
+                    foodViewModel.ImageLcation = (string)row[7];
                     foodViewModel.DescriptionText = (string)row[8];
 
                     foodEntriesList.Add(foodViewModel);
@@ -145,13 +145,13 @@ namespace FitnessApp440.Helper
                 using var cmd = new MySqlCommand(sqlQuery, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@byUser", foodViewModelEntry.ByUser);
+                cmd.Parameters.AddWithValue("@byUser", foodViewModelEntry.ByUser = "username10");
                 cmd.Parameters.AddWithValue("@name", foodViewModelEntry.Name);
                 cmd.Parameters.AddWithValue("@calories", foodViewModelEntry.Calories);
                 cmd.Parameters.AddWithValue("@protein", foodViewModelEntry.Protein);
                 cmd.Parameters.AddWithValue("@carbs", foodViewModelEntry.Carbs);
                 cmd.Parameters.AddWithValue("@fat", foodViewModelEntry.Fat);
-                cmd.Parameters.AddWithValue("@image", foodViewModelEntry.Image = "testing");
+                cmd.Parameters.AddWithValue("@image", foodViewModelEntry.ImageLcation);
                 cmd.Parameters.AddWithValue("@description", foodViewModelEntry.DescriptionText);
                 queryResult = cmd.ExecuteNonQuery();
 
