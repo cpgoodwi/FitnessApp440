@@ -18,11 +18,7 @@ class Food {
         return (`
             <div class="food-item" id="food${this.foodID}">
                 <img src="/img/${this.image}" alt="${this.name}" height="100" />
-<<<<<<< HEAD
                 <h5 class="food-name">${this.name} by <a class="food-by" id="to${this.byUser}">${this.byUser}</a></h5>
-=======
-                <h3 class="food-name">${this.name}</h3><a class="food-by">${this.byUser}</a>
->>>>>>> 898f9dd (Changed of the desgn)
                 <ul class="food-stats">
                     <li><span>Calories:</span> ${this.calories}cal</li>
                     <li><span>Protein:</span> ${this.protein}g</li>
@@ -50,14 +46,5 @@ function likeFood(foodID) {
     //$(`food${this.foodID}-like`).click(function () {
     //    $(`food${this.foodID}-like`).html("&#10084");
     //});
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     $(`#food${foodID}-like`).css("color", "red");
-=======
-    //$(`#food${this.foodID}-like`).css("background-color", "red");
->>>>>>> 5877142 (Morris’ small change)
-=======
-    //$(`#food${this.foodID}-like`).css("background-color", "red");
->>>>>>> 5877142 (Morris’ small change)
 }

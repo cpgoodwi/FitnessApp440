@@ -48,26 +48,6 @@ function hideApp() {
     }
 }
 
-<<<<<<< HEAD
-function loggedIn() {
-    // check status of user login in database
-    $.ajax({
-        type: "GET",
-        url: "/Session/GetSessionKeyUsername",
-        dataType: "text",
-        success: function (result) {
-            alert("you did it")
-            console.log(result)
-        },
-        //error: function (req, status, error) {
-        //    alert("no luck")
-        }
-    })
-
-    return true
-}
-=======
 $("#toLogout").click(function () {
     // TODO: Figure out a way to logout. Right now its just close and reopen
 })
->>>>>>> f994b5fe38ebf0e441dc242d464ac7bbf67fe9f4

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Data;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-using FitnessApp440.Helper
+using FitnessApp440.Helper;
 
 namespace FitnessApp440.Models
 {
