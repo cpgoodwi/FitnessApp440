@@ -47,5 +47,9 @@ function likeFood(foodID) {
     //    $(`food${this.foodID}-like`).html("&#10084");
     //});
 
+<<<<<<< HEAD
     $(`#food${foodID}-like`).css("color", "red");
+=======
+    //$(`#food${this.foodID}-like`).css("background-color", "red");
+>>>>>>> 5877142 (Morris’ small change)
 }
