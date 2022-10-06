@@ -67,7 +67,7 @@ namespace FitnessApp440.Helper
                 {
 
                     foodViewModel.FoodID = (int)row[0];
-                    foodViewModel.byUser = (string)row[1];
+                    foodViewModel.ByUser = (string)row[1];
                     foodViewModel.Name = (string)row[2];
                     foodViewModel.Calories = (short)row[3];
                     foodViewModel.Protein = (short)row[4];
@@ -145,7 +145,7 @@ namespace FitnessApp440.Helper
                 using var cmd = new MySqlCommand(sqlQuery, connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@byUser", foodViewModelEntry.byUser);
+                cmd.Parameters.AddWithValue("@byUser", foodViewModelEntry.ByUser);
                 cmd.Parameters.AddWithValue("@name", foodViewModelEntry.Name);
                 cmd.Parameters.AddWithValue("@calories", foodViewModelEntry.Calories);
                 cmd.Parameters.AddWithValue("@protein", foodViewModelEntry.Protein);

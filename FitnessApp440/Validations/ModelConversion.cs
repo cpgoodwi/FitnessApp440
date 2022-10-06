@@ -10,7 +10,7 @@ namespace FitnessApp440.Validations
             DBFoodModel dBFoodModel = new DBFoodModel();
 
             dBFoodModel.Name = foodViewModel.Name;
-            dBFoodModel.byUser = foodViewModel.byUser;
+            dBFoodModel.byUser = foodViewModel.ByUser;
             dBFoodModel.Calories = foodViewModel.Calories;
             dBFoodModel.Protein = foodViewModel.Protein;
             dBFoodModel.Carbs = foodViewModel.Carbs;

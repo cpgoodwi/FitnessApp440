@@ -11,7 +11,7 @@ namespace FitnessApp440.Models
     /* TODO: implement constructor to get from database
      *  
      */
-
+    
     public class FoodViewModel
     {
         public FoodViewModel() { }
@@ -20,7 +20,7 @@ namespace FitnessApp440.Models
 
         public String? Name { get; set; }
 
-        public String? byUser { get; set; }
+        public String? ByUser{ get; set; }
 
         public Int16 Calories { get; set; }
 
@@ -33,13 +33,15 @@ namespace FitnessApp440.Models
         public String? Image { get; set; }
 
         public String? DescriptionText { get; set; }
-        public DataRow Row { get; set; }
+        // public DataRow Row { get; set; }
 
         public FoodViewModel(int foodID, string? name, string? byUser, short calories, short protein, short carbs, short fat, string? image, string? descriptionText)
         {
             FoodID = foodID;
             Name = name;
-            this.byUser = byUser;
+
+            ByUser = byUser;
+            
             Calories = calories;
             Protein = protein;
             Carbs = carbs;
@@ -49,10 +51,10 @@ namespace FitnessApp440.Models
             /*Row = row;*/
         }
 
-        public FoodViewModel(DataRow row)
+        /*public FoodViewModel(DataRow row)
         {
             Row = row;
-        }
+        }*/
     }
 
     public class FoodRenderModel

@@ -25,7 +25,7 @@ namespace FitnessApp440.Controllers
         {
 
             string Name = FoodViewModel.Name;
-            string byUser = FoodViewModel.byUser;
+            string byUser = FoodViewModel.ByUser; // replace with code that gets session variable
             int calories = FoodViewModel.Calories;
             int protein = FoodViewModel.Protein;
             int carbs = FoodViewModel.Carbs;

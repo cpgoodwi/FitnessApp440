@@ -28,7 +28,18 @@ $(document).ready(function () {
 
 function loggedIn() {
     // check status of user login in database
-
+    $.ajax({
+        type: "GET",
+        url: "/Session/GetSessionKeyUsername",
+        dataType: "text",
+        success: function (result) {
+            alert("you did it")
+            console.log(result)
+        },
+        error: function (req, status, error) {
+            alert("no luck")
+        }
+    })
 
     return true
 }

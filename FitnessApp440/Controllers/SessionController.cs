@@ -26,5 +26,12 @@ namespace FitnessApp440.Controllers
 
             return sessionInfo;
         }
+
+        [HttpGet]
+        public string? GetSessionKeyUsername()
+        {
+            var value = HttpContext.Session.GetString(SessionVariables.SessionKeyUsername);
+            return value;
+        }
     }
 }
