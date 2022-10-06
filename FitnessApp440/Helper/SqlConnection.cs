@@ -243,6 +243,22 @@ namespace FitnessApp440.Helper
 
             return likedFood;
         }
+
+        public static void CreateNewUserInDatabase(string username, string password, string description)
+        {
+            /*  TODO: run sql query to insert a new user into USER table
+             *  query might look like:
+             *  insert into USER (USERNAME, PASSWORD, DESCRIPTION) values (<username>, <password>, <description>);
+             */
+        }
+
+        public static void LikePost(string username, int foodID)
+        {
+            /*  TODO: run a sql query to insert new like into the LIKES table
+             *  query might look like:
+             *  insert into LIKES (USERNAME, FOODID) values (<username>, <foodID>);
+             */
+        }
     }
 }
 
