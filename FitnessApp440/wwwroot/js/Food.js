@@ -52,7 +52,11 @@ function likeFood(foodID) {
     //});
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     $(`#food${foodID}-like`).css("color", "red");
+=======
+    //$(`#food${this.foodID}-like`).css("background-color", "red");
+>>>>>>> 5877142 (Morris’ small change)
 =======
     //$(`#food${this.foodID}-like`).css("background-color", "red");
 >>>>>>> 5877142 (Morris’ small change)
