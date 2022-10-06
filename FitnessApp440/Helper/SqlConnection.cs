@@ -49,6 +49,7 @@ namespace FitnessApp440.Helper
         // The list will be sent to the controller so it can sent to the client to display the data.
         public static List<FoodViewModel> RunFoodQuery()
         {
+            EstablishConnection();
 
             FoodViewModel foodViewModel = new FoodViewModel();
             List<FoodViewModel> foodEntriesList = new List<FoodViewModel>();
@@ -56,7 +57,7 @@ namespace FitnessApp440.Helper
 
             if (connection.State == ConnectionState.Open)
             {
-                string sqlQuery = "select * from FOOD";
+                string sqlQuery = "select * from FOOD where image != null;";
                 using var cmd = new MySqlCommand(sqlQuery, connection);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();

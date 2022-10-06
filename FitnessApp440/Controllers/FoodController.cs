@@ -64,7 +64,7 @@ namespace FitnessApp440.Controllers
 
             AddFoodToDatabase(newFood);
 
-            return View();
+            return View("../Home/Index");
         }
 
         [HttpPost]
@@ -126,6 +126,12 @@ namespace FitnessApp440.Controllers
                       + Guid.NewGuid().ToString().Substring(0, 4)
                       + Path.GetExtension(fileName);
         }
+
+        [HttpGet]
+        public JsonResult LoadAllFood()
+        {
+            return new JsonResult(Ok(HomeController.FoodListResult()));
+        } 
     }
 }
 
