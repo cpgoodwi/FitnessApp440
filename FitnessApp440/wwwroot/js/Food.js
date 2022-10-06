@@ -2,7 +2,7 @@
 // takes data from data as attributes and loads it into one HTML component to render
 
 class Food {
-    constructor(foodID, byUser, name, calories, protein, carbs, fat, image, description) {
+    constructor(foodID, byUser, name, calories, protein, carbs, fat, imageLcation, description) {
         this.foodID = foodID
         this.byUser = byUser // TODO: implement link to view specific user posts
         this.name = name
@@ -10,15 +10,15 @@ class Food {
         this.protein = protein
         this.carbs = carbs
         this.fat = fat
-        this.image = image
+        this.imageLcation = imageLcation
         this.description = description
     }
 
     renderHTML() {
         return (`
             <div class="food-item" id="food${this.foodID}">
-                <img src="/img/${this.image}" alt="${this.name}" height="100" />
-                <h5 class="food-name">${this.name} by <a class="food-by" id="to${this.byUser}">${this.byUser}</a></h5>
+                <img src="/img/${this.imageLcation}" alt="${this.name}" height="100" />
+                <h3 class="food-name">${this.name}</h3><a class="food-by" id="to${this.byUser}">${this.byUser}</a>
                 <ul class="food-stats">
                     <li><span>Calories:</span> ${this.calories}cal</li>
                     <li><span>Protein:</span> ${this.protein}g</li>

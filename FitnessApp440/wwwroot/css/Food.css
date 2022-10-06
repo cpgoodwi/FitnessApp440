@@ -1,25 +1,29 @@
-﻿/* Write CSS rules for food components */
-
-/*Computer view*/
+﻿/*Computer view*/
 @media only screen and (min-width: 1024px) {
     .food-item {
         position: relative;
-        border: 3px solid #A9A7A2;
-        border-radius: 5px;
+        border-radius: 10px;
         height: 150px;
+        background-color: lightgray;
+        padding: 15px;
+        margin-bottom: 5px;
     }
+
+        .food-item img {
+            border-radius: 10px;
+        }
 
     .food-name {
         position: absolute;
         top: 0px;
-        left: 130px;
+        left: 150px;
         font-family: Verdana;
     }
 
     .food-by {
         position: absolute;
-        top: 8px;
-        left: 300px;
+        top: 7px;
+        left: 600px;
     }
 
     .food-stats {
@@ -28,9 +32,9 @@
         top: 40px;
     }
 
-    .food-stats li {
-        display: inline;
-    }
+        .food-stats li {
+            display: inline;
+        }
 
     .food-desc {
         position: absolute;
@@ -44,9 +48,10 @@
         right: 8px;
         font-size: 60px;
     }
+
     .food-item span {
         color: #CD1D1D;
-        font-weight:500;
+        font-weight: 500;
     }
 }
 
@@ -54,10 +59,16 @@
 @media only screen and (max-width: 1023px) and (min-width: 511px) {
     .food-item {
         position: relative;
-        border: 3px solid #A9A7A2;
-        border-radius: 5px;
+        border-radius: 10px;
         height: 150px;
+        background-color: lightgray;
+        padding: 15px;
+        margin-bottom: 5px;
     }
+
+        .food-item img {
+            border-radius: 10px;
+        }
 
     .food-stats {
         position: absolute;
@@ -68,7 +79,7 @@
     .food-by {
         position: absolute;
         top: 8px;
-        left: 270px;
+        left: 570px;
     }
 
     .food-name {
@@ -94,6 +105,7 @@
         right: 2px;
         font-size: 45px;
     }
+
     .food-item span {
         color: #CD1D1D;
         font-weight: 500;
@@ -104,10 +116,16 @@
 @media only screen and (max-width: 510px) and (min-width: 401px) {
     .food-item {
         position: relative;
-        border: 3px solid #A9A7A2;
-        border-radius: 5px;
+        border-radius: 10px;
         height: 150px;
+        background-color: lightgray;
+        padding: 15px;
+        margin-bottom: 5px;
     }
+
+        .food-item img {
+            border-radius: 10px;
+        }
 
     .food-name {
         position: absolute;
@@ -119,7 +137,7 @@
     .food-by {
         position: absolute;
         top: 8px;
-        left: 270px;
+        left: 570px;
     }
 
     .food-stats {
@@ -128,9 +146,9 @@
         top: 25px;
     }
 
-     .food-stats li {
-        display: inline;
-    }
+        .food-stats li {
+            display: inline;
+        }
 
     .food-desc {
         position: absolute;
@@ -144,6 +162,7 @@
         right: 5px;
         font-size: 30px;
     }
+
     .food-item span {
         color: #CD1D1D;
         font-weight: 500;
@@ -151,12 +170,14 @@
 }
 
 /*mobile view*/
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 400px) {
     .food-item {
         position: relative;
-        border: 3px solid #A9A7A2;
         border-radius: 5px;
         height: 390px;
+        background-color: #F1ECEC;
+        padding: 5px;
+        margin-bottom: 5px;
     }
 
     .food-item img {
@@ -164,13 +185,14 @@
         margin: auto;
         margin-top: 25px;
         display: block;
+        border-radius: 10px;
     }
 
     .food-item h3 {
         position: absolute;
         top: 1px;
         left: 10px;
-        font-family:Verdana;
+        font-family: Verdana;
     }
 
     .food-item a {
