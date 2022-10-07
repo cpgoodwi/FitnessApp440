@@ -51,13 +51,12 @@ namespace FitnessApp440.Helper
         {
             EstablishConnection();
 
-            FoodViewModel foodViewModel = new FoodViewModel();
             List<FoodViewModel> foodEntriesList = new List<FoodViewModel>();
 
 
             if (connection.State == ConnectionState.Open)
             {
-                string sqlQuery = "select * from FOOD where image != null;";
+                string sqlQuery = "select * from FOOD where image is not null;";
                 using var cmd = new MySqlCommand(sqlQuery, connection);
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -67,17 +66,17 @@ namespace FitnessApp440.Helper
                 foreach (DataRow row in dt.Rows)
                 {
 
-                    foodViewModel.FoodID = (int)row[0];
-                    foodViewModel.ByUser = (string)row[1];
-                    foodViewModel.Name = (string)row[2];
-                    foodViewModel.Calories = (short)row[3];
-                    foodViewModel.Protein = (short)row[4];
-                    foodViewModel.Carbs = (short)row[5];
-                    foodViewModel.Fat = (short)row[6];
-                    foodViewModel.ImageLcation = (string)row[7];
-                    foodViewModel.DescriptionText = (string)row[8];
+                    var foodID = (int)row[0];
+                    var byUser = (string)row[1];
+                    var name = (string)row[2];
+                    var calories = (short)row[3];
+                    var protein = (short)row[4];
+                    var carbs = (short)row[5];
+                    var fat = (short)row[6];
+                    var imageLcation = (string)row[7];
+                    var descriptionText = (string)row[8];
 
-                    foodEntriesList.Add(foodViewModel);
+                    foodEntriesList.Add(new FoodViewModel(foodID, name, byUser, calories, protein, carbs, fat, imageLcation, descriptionText));
 
                 }
 
