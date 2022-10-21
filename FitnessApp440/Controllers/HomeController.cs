@@ -4,6 +4,7 @@ using System.Diagnostics;
 using FitnessApp440.Helper;
 using System.Data.SqlClient;
 
+/* TESTING GIT */
 
 /* TODO: spread sql methods to other controllers */
 
